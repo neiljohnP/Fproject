@@ -6,7 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background-color: rgba(134, 168, 128, 0.67);
+  background-color: rgba(171, 188, 168, 0.67);
 }
 
 /* Scroll Bar */
@@ -57,7 +57,6 @@ nav {
   display: inline-grid;;
   font-size: 1rem;
   color: white;
-  /* Add any other styles as needed */
 }
 
 #cart_count {
@@ -75,7 +74,7 @@ nav {
 }
 
 #products_heading {
-  font-family: 'fantasy'; 
+  font-family: 'Impact, fantasy'; 
   font-weight: bold;
   font-size: rem;
   text-align: left; 
