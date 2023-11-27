@@ -6,6 +6,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  background-color: rgba(134, 168, 128, 0.67);
 }
 
 /* Scroll Bar */
@@ -71,6 +72,13 @@ nav {
 
 #cart_count:hover {
   background-color: #4ca844;
+}
+
+#products_heading {
+  font-family: 'fantasy'; 
+  font-weight: bold;
+  font-size: rem;
+  text-align: left; 
 }
 
 /* Home page */

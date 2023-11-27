@@ -73,8 +73,8 @@ const Home = () => {
           <div className="px-5">
             <Range
               marks={{
-                1: `$1`,
-                1000: `$1000`,
+                1: `₱1`,
+                1000: `₱1000`,
               }}
               min={1}
               max={1000}
