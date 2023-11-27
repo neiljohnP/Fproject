@@ -95,6 +95,11 @@ nav {
 #view_btn {
   background-color: rgb(39, 250, 35);
   color: white;
+  transition: background-color 0.3s ease;
+}
+
+#view_btn:hover {
+  background-color: rgb(29, 200, 25);
 }
 
 .card-img-top {
