@@ -1,14 +1,21 @@
 html,
 body {
-  font-family: 'Amazon Ember';
+  font-family: 'Arial';
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  background-color: rgba(171, 188, 168, 0.67);
+  background-color: rgba(134, 168, 128, 0.67);
 }
-
+#products_heading {
+  font-family: 'Helvet  ica', sans-serif;
+  color: #333; /* Change the text color */
+  background-color: #f8f8f8; /* Add a background color */
+  padding: 10px; /* Add some padding for spacing */
+  text-align: center; /* Center the text */
+  border-bottom: 2px solid #ccc; /* Add a border at the bottom */
+}
 /* Scroll Bar */
 
 ::-webkit-scrollbar-track {
@@ -326,15 +333,20 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: rgb(4, 68, 90);
+  border-color: #000000;
   color: white;
   margin-top: 2.5rem;
+  transition: background-color 0.3s ease; 
+}
+
+.wrapper form .btn:hover {
+  background-color: #cacaca; 
 }
 
 .wrapper form a {
   font-size: 0.9rem;
-  color: rgb(128, 128, 128);
+  color: rgb(16, 40, 198);
 }
 
 /* Avatar */

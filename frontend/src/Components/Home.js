@@ -1,15 +1,15 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react';
 
-import MetaData from './Layout/MetaData'
-import axios from 'axios'
-import Pagination from 'react-js-pagination'
-import Product from './Product/Product'
-import Loader from './Layout/Loader'
+import MetaData from './Layout/MetaData';
+import axios from 'axios';
+import Pagination from 'react-js-pagination';
+import Product from './Product/Product';
+import Loader from './Layout/Loader';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom';
 
-const categories = ['classic', 'BBQ', 'CHEESE', 'SPICY CHEESE', 'SOUR CREAM', 'SPICY', "SALT & VINEGAR"];
+const categories = ['classic', 'BBQ', 'CHEESE', 'SPICY CHEESE', 'SOUR CREAM', 'SPICY', 'SALT & VINEGAR'];
 
 const Home = () => {
   let { keyword } = useParams();
@@ -33,10 +33,10 @@ const Home = () => {
   const getProducts = async (page = 1, keyword = '', price, category = '') => {
     let link = '';
 
-    link = `${process.env.REACT_APP_API}/api/v1/products/?page=${page}&keyword=${keyword}&price[lte]=${price[1]}&price[gte]=${price[0]}`;
+    link = `${process.env.REACT_APP_API}/api/v1/products/?page=${page}&price[lte]=${price[1]}&price[gte]=${price[0]}`;
 
     if (category) {
-      link = `${process.env.REACT_APP_API}/api/v1/products?keyword=${keyword}&page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`;
+      link = `${process.env.REACT_APP_API}/api/v1/products?page=${currentPage}&price[lte]=${price[1]}&price[gte]=${price[0]}&category=${category}`;
     }
 
     console.log(link);
@@ -54,9 +54,6 @@ const Home = () => {
   }, [currentPage, keyword, price, category]);
 
   let count = productsCount;
-  if (keyword) {
-    count = filteredProductsCount;
-  }
 
   return (
     <>
@@ -69,64 +66,52 @@ const Home = () => {
             <h1 id="products_heading">Latest Products</h1>
             <section id="products" className="container mt-5">
               <div className="row">
-                {keyword ? (
-                  <Fragment>
-                    <div className="col-6 col-md-3 mt-5 mb-5">
-                      <div className="px-5">
-                        <Range
-                          marks={{
-                            1: `$1`,
-                            1000: `$1000`,
-                          }}
-                          min={1}
-                          max={1000}
-                          defaultValue={[1, 1000]}
-                          tipFormatter={(value) => `$${value}`}
-                          tipProps={{
-                            placement: 'top',
-                            visible: true,
-                          }}
-                          value={price}
-                          onChange={(price) => setPrice(price)}
-                        />
-                        <hr className="my-5" />
-                        <div className="mt-5">
-                          <h4 className="mb-3">Categories</h4>
-                          <ul className="pl-0">
-                            {categories.map((category) => (
-                              <li
-                                style={{
-                                  cursor: 'pointer',
-                                  listStyleType: 'none',
-                                }}
-                                key={category}
-                                onClick={() => setCategory(category)}
-                              >
-                                {category}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="col-6 col-md-9 overflow-auto">
-                      <div className="row">
-                        {products.map((product) => (
-                          <Product key={product._id} product={product} col={4} />
+                <div className="col-6 col-md-3 mt-5 mb-5">
+                  <div className="px-5">
+                    <Range
+                      marks={{
+                        1: `$1`,
+                        1000: `$1000`,
+                      }}
+                      min={1}
+                      max={1000}
+                      defaultValue={[1, 1000]}
+                      tipFormatter={(value) => `$${value}`}
+                      tipProps={{
+                        placement: 'top',
+                        visible: true,
+                      }}
+                      value={price}
+                      onChange={(price) => setPrice(price)}
+                    />
+                    <hr className="my-5" />
+                    <div className="mt-5">
+                      <h4 className="mb-3">Categories</h4>
+                      <ul className="pl-0">
+                        {categories.map((category) => (
+                          <li
+                            style={{
+                              cursor: 'pointer',
+                              listStyleType: 'none',
+                            }}
+                            key={category}
+                            onClick={() => setCategory(category)}
+                          >
+                            {category}
+                          </li>
                         ))}
-                      </div>
-                    </div>
-                  </Fragment>
-                ) : (
-                  <div className="col-12 overflow-auto">
-                    <div className="row">
-                      {products.map((product) => (
-                        <Product key={product._id} product={product} col={3} />
-                      ))}
+                      </ul>
                     </div>
                   </div>
-                )}
+                </div>
+
+                <div className="col-6 col-md-9 overflow-auto">
+                  <div className="row">
+                    {products.map((product) => (
+                      <Product key={product._id} product={product} col={4} />
+                    ))}
+                  </div>
+                </div>
               </div>
             </section>
             {resPerPage <= count && (
