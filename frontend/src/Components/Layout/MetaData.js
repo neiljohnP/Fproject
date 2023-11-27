@@ -5,7 +5,7 @@ const MetaData = ({ title = 'Default Title' }) => {
     return (
         <Helmet>
             {/* Set the page title with the specified title and a default suffix */}
-            <title>{`${title} - ShopIT`}</title>
+            <title>{`${title} - Kangkong Chips`}</title>
         </Helmet>
     );
 };
