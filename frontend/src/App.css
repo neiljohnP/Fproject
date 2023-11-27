@@ -27,12 +27,12 @@ body {
 }
 
 nav {
-  background-color: #232f3e;
+  background-color: #04681e;
   padding: 1rem 1rem;
 }
 
 #search_btn {
-  background-color: #febd69;
+  background-color: #dee0e2;
 }
 
 .input-group {
@@ -47,21 +47,21 @@ nav {
 
 #login_btn,
 #view_btn {
-  background-color: #febd69;
+  background-color: #69fe6b;
   padding: 0.4rem 1.8rem;
   font-family: calibri;
 }
 
 #cart {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 #cart_count {
-  background-color: #febd69;
-  padding: 0.2rem 0.5rem;
+  background-color: #69fe6b;
+  padding: 0.69rem 0.5rem;
   border-radius: 0.2rem;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -80,8 +80,8 @@ nav {
 }
 
 .card-title a:hover {
-  color: #fa9c23;
-  text-decoration: none;
+  color: #00ff55;
+  text-decoration-style: solid;
 }
 
 .card-body {
