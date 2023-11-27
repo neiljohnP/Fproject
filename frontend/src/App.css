@@ -64,6 +64,7 @@ nav {
   display: inline-grid;;
   font-size: 1rem;
   color: white;
+  
 }
 
 #cart_count {
@@ -81,7 +82,7 @@ nav {
 }
 
 #products_heading {
-  font-family: 'fantasy'; 
+  font-family: 'Impact, fantasy'; 
   font-weight: bold;
   font-size: rem;
   text-align: left; 
@@ -254,7 +255,7 @@ footer {
 }
 
 .cart-item a {
-  color: grey;
+  color: rgb(10, 10, 10);
 }
 
 #delete_cart_item {
@@ -266,7 +267,7 @@ footer {
 }
 
 #card_item_price {
-  color: #febd69;
+  color: #636161;
   font-weight: bold;
   font-size: 1.4rem;
 }
@@ -280,8 +281,8 @@ footer {
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #6efa23;
+  border-color: #6efa23;
 }
 
 #order_summary {
@@ -499,16 +500,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #3cfa23;
+  border-color: #faf9f9;
 }
 
 .page-link {
-  color: #fa9c23;
+  color: #4afa23;
 }
 
 .page-link:hover {
-  color: #fa9c23;
+  color: #090909;
 }
 
 /* Admin Sidebar */
@@ -529,7 +530,7 @@ footer {
 #sidebar {
   min-width: 100%;
   max-width: 100%;
-  background: #232f3e;
+  background: #1bfb75;
   color: #fff;
   transition: all 0.3s;
 }
@@ -543,7 +544,7 @@ footer {
 }
 #sidebar ul.components {
   padding: 5px 0px;
-  border-bottom: 1px solid #232f3e;
+  border-bottom: 1px solid #0b0b0b;
 }
 
 #sidebar ul li a {
