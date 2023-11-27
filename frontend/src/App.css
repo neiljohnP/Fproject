@@ -11,12 +11,12 @@ body {
 /* Scroll Bar */
 
 ::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
+  background-color: #e1dddd;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: #f5f5f5;
+  background-color: #f8f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -53,17 +53,24 @@ nav {
 }
 
 #cart {
-  font-size: 1.5rem;
+  display: inline-grid;;
+  font-size: 1rem;
   color: white;
+  /* Add any other styles as needed */
 }
 
 #cart_count {
   background-color: #69fe6b;
-  padding: 0.69rem 0.5rem;
+  padding: .7rem 0.50rem;
   border-radius: 0.2rem;
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+#cart_count:hover {
+  background-color: #4ca844;
 }
 
 /* Home page */
@@ -103,7 +110,7 @@ nav {
 }
 
 .card-img-top {
-  width: 200px;
+  width: 100px;
   height: 150px;
 }
 
@@ -320,7 +327,7 @@ footer {
 
 .wrapper form a {
   font-size: 0.9rem;
-  color: grey;
+  color: rgb(128, 128, 128);
 }
 
 /* Avatar */
