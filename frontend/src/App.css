@@ -9,12 +9,14 @@ body {
   background-color: rgba(76, 170, 57, 0.67);
 }
 #products_heading {
-  font-family: 'Helvet  ica', sans-serif;
-  color: #333; /* Change the text color */
-  background-color: #f8f8f8; /* Add a background color */
-  padding: 10px; /* Add some padding for spacing */
+  font-family: 'sans-serif'; /* Replace 'Your Font Here' with the desired font name */
+  color: #49d15b; /* Text color */
+  background-color: #f8f8f8; /* Background color */
+  padding: 10px; /* Padding for spacing */
   text-align: center; /* Center the text */
-  border-bottom: 2px solid #ccc; /* Add a border at the bottom */
+  border-bottom: 2px solid #ccc; /* Border at the bottom */
+  font-size: 28px; /* Adjust the font size */
+  font-weight: bold; /* Set font weight */
 }
 /* Scroll Bar */
 
