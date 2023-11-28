@@ -9,14 +9,14 @@ body {
   background-color: rgba(76, 170, 57, 0.67);
 }
 #products_heading {
-  font-family: 'sans-serif'; /* Replace 'Your Font Here' with the desired font name */
-  color: #49d15b; /* Text color */
-  background-color: #f8f8f8; /* Background color */
-  padding: 10px; /* Padding for spacing */
-  text-align: center; /* Center the text */
-  border-bottom: 2px solid #ccc; /* Border at the bottom */
-  font-size: 28px; /* Adjust the font size */
-  font-weight: bold; /* Set font weight */
+  font-family: sans-serif;
+  color: #ffffff;
+  background-color: rgb(97, 97, 97);
+  padding: 10px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }
 /* Scroll Bar */
 
