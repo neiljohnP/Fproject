@@ -8,6 +8,18 @@ body {
   overflow-x: hidden;
   background-color: rgba(76, 170, 57, 0.67);
 }
+@keyframes blink {
+  0% {
+    background-color: rgb(97, 97, 97);
+  }
+  50% {
+    background-color: #333; /* Change to the color you want during the blink */
+  }
+  100% {
+    background-color: rgb(97, 97, 97);
+  }
+}
+
 #products_heading {
   font-family: sans-serif;
   color: #ffffff;
@@ -16,7 +28,8 @@ body {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  animation: blink 2s infinite; /* Adjust the duration of the blink */
 }
 /* Scroll Bar */
 
