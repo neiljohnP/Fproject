@@ -9,6 +9,19 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useParams } from 'react-router-dom';
 
+const ImageComponent = () => {
+  return (
+    <div>
+      <h1>Image Example</h1>
+      <img
+        src="https://ucarecdn.com/0931fce3-54a7-4426-9d42-213d8d819d51/-/format/auto/-/preview/3000x3000/-/quality/lighter/flavors%20banner2.jpg" // Replace this URL with the URL of your image
+        alt="Description of the image"
+        style={{ width: '300px', height: '200px' }} // Set the desired width and height
+      />
+    </div>
+  );
+};
+
 const categories = ['classic', 'BBQ', 'CHEESE', 'SPICY CHEESE', 'SOUR CREAM', 'SPICY', 'SALT & VINEGAR'];
 
 const Home = () => {
