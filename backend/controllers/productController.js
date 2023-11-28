@@ -14,10 +14,10 @@ const cloudinary = require('cloudinary')
 
 exports.getProducts = async (req, res, next) => {
 	// const products = await Product.find({});
-	const resPerPage = 4;
+	// const resPerPage = 4;
 	const productsCount = await Product.countDocuments();
 	const apiFeatures = new APIFeatures(Product.find(), req.query).search().filter()
-	apiFeatures.pagination(resPerPage);
+	// apiFeatures.pagination(resPerPage);
 	const products = await apiFeatures.query;
 	const filteredProductsCount = products.length
 	if (!products) {
@@ -31,7 +31,7 @@ exports.getProducts = async (req, res, next) => {
 		count: products.length,
 		productsCount,
 		products,
-		resPerPage,
+		// resPerPage,
 		filteredProductsCount,
 	})
 }

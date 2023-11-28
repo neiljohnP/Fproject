@@ -73,6 +73,7 @@ const UpdateProduct = () => {
             
         }
     }
+    
     useEffect(() => {
         if (product && product._id !== id) {
             getProductDetails(id)
@@ -130,6 +131,36 @@ const UpdateProduct = () => {
             reader.readAsDataURL(file)
         })
     }
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/${id}`);
+                setProduct(data.product);
+                setLoading(false);
+            } catch (error) {
+                setError(error.response.data.message);
+            }
+        };
+    
+        fetchData();
+    
+        if (error) {
+            errMsg(error);
+        }
+    
+        if (updateError) {
+            errMsg(updateError);
+        }
+    
+        if (isUpdated) {
+            navigate('/admin/products');
+            successMsg('Product updated successfully');
+        }
+    
+        // Include id in the dependency array
+    }, [error, isUpdated, updateError, id, navigate]);
+
+
     return (
         <Fragment>
             <MetaData title={'Update Product'} />

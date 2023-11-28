@@ -18,7 +18,7 @@ const Home = () => {
   const [error, setError] = useState();
   const [productsCount, setProductsCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [resPerPage, setResPerPage] = useState(0);
+  // const [resPerPage, setResPerPage] = useState(0);
   const [filteredProductsCount, setFilteredProductsCount] = useState(0);
   const [price, setPrice] = useState([1, 1000]);
   const [category, setCategory] = useState('');
@@ -43,7 +43,7 @@ const Home = () => {
     let res = await axios.get(link);
     console.log(res);
     setProducts(res.data.products);
-    setResPerPage(res.data.resPerPage);
+    // setResPerPage(res.data.resPerPage);
     setProductsCount(res.data.productsCount);
     setFilteredProductsCount(res.data.filteredProductsCount);
     setLoading(false);
@@ -114,7 +114,7 @@ const Home = () => {
                 </div>
               </div>
             </section>
-            {resPerPage <= count && (
+            {/* {resPerPage <= count && (
               <div className="d-flex justify-content-center mt-5">
                 <Pagination
                   activePage={currentPage}
@@ -129,7 +129,7 @@ const Home = () => {
                   linkClass="page-link"
                 />
               </div>
-            )}
+            )} */}
           </div>
         </Fragment>
       )}
